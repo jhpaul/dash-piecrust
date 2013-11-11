@@ -1,0 +1,51 @@
+---
+layout: none
+---
+<html>
+<style>	
+	#layout div {
+		display: inline-block;
+		border: solid black 4px;
+		position: relative;
+	}
+	#left {
+		width: 800px;
+	}
+	#right {
+		width: 1000px;
+		display: block;
+	}
+	#layout iframe {
+		width: 100%;
+		height: 100%;
+	}
+	#box1 {
+		position: absolute;
+	}
+</style>
+<div id="layout">
+	<div id="left">
+		<div id="box1">
+			<iframe src="/a" frameborder="0"></iframe>
+		</div><br>
+		<div id="box2"><iframe src="/b" frameborder="0"></iframe></div>
+	</div>
+	<div id="right">
+		<div id="box3"><iframe src="/index" frameborder="0"></iframe></div>
+	</div>
+</div>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+    // $(function() {
+    // 	$.get ("/a", function(pagea){
+    //     $('#box1').html(pagea);
+    //     $.get ("/b", function(pagea){
+    //     $('#box2').html(pagea);
+    //      $.get ("/index", function(pagec){
+    //     $('#box3').html(pagec);
+    // });
+    // });
+    // });
+    // });
+</script>
+</html>

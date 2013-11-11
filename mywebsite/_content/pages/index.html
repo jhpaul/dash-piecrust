@@ -1,0 +1,116 @@
+---
+layout: none
+---
+
+<html>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<style>
+   .slide-inner {
+    	float: none;
+    	outline: none;
+    	border: 0;
+   }
+   .slide-inner span {
+    	font-family: Georgia;
+    	font-size: 1.75em;
+    	color: #1f497d;
+    	text-align: center;
+   }
+   .slide-inner a {
+   		outline: none;
+   		border: 0;
+   }
+   .slide-inner img {
+   		outline: none;
+   		float: none;
+   		border: 0;
+   }
+	/*Image Slider*/
+	.rslides {
+		position: relative;
+		list-style: none;
+		overflow: hidden;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+	.rslides li {
+	 	-webkit-backface-visibility: hidden;
+	 	position: absolute;
+	 	display: none;
+	 	width: 100%;
+	 	left: 0;
+	 	top: 0;
+	 	margin-left: 0;
+	}
+	.rslides li:first-child {
+		position: relative;
+		display: block;
+		float: left;
+	}
+	.rslides img {
+		display: block;
+		height: auto;
+		float: left;
+		width: 100%;
+		border: 0;
+	}
+	nav {
+		font-size: 1.4em;
+		font-family: Georgia,"Times New Roman",Times,serif;
+		font-weight: 700;
+	}
+	nav ul {
+		margin-left: -15px;
+	}
+	nav li {
+		padding-bottom: 10px;
+	}
+	nav h4 {
+		padding-bottom: 10px;
+	}
+	header * {
+		padding: 0;
+		margin: 0;
+	}
+</style>
+
+<header>
+	<div class="slide-box">
+      <ul class="rslides" id="slides">
+        <li id="one"></li>
+        <li id="two"></li>
+<!--         <li>The contents can be anything<br> and the cycle will pause if you hover on it</li>
+        <li><div class="slide-inner"><span>Styled Text and Image Link</span><br><br> <a href="#"><img id="fifty" src="http://placehold.it/50x50" alt=""></a></div></li>
+        <li><iframe width="304" height="202" src="http://riphil.org"></iframe></li>
+        <li><img src="http://placehold.it/300x450/135465"></li>
+        <li><img src="http://placehold.it/300x450/754323"></li>
+      </ul> -->
+    </div>
+</header>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://dl.dropboxusercontent.com/u/196078461/assets/js/responsive-slides/responsiveslides.js"></script>
+<script>
+    $(function() {
+    	$.get ("/a", function(pagea){
+        $('#one').html(pagea);
+    	$.get ("/b", function(pageb){
+        $('#two').html(pageb); 
+        $("#slides").responsiveSlides({
+        maxwidth: 800,
+        auto: true,
+        pause: true,
+        speed: 800,            // Integer: Speed of the transition, in milliseconds
+        timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
+        // pager: false,           // Boolean: Show pager, true or false
+        // nav: true,             // Boolean: Show navigation, true or false
+        random: false,          // Boolean: Randomize the order of the slides, true or false
+        // pause: false,           // Boolean: Pause on hover, true or false
+        // pauseControls: true,    // Boolean: Pause when hovering controls, true or false
+      });
+    });
+    });
+ 	});
+    // alert('text');
+</script>
+</html>

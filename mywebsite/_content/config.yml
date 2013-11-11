@@ -1,0 +1,10 @@
+site:
+    title: 'Dashboard'
+    description: 'A website recently generated with PieCrust.'
+    author: jhpaul
+    pretty_urls: true
+    cache_time: 0.001
+    hide_quickstart: true
+smartypants:
+    enable: true
+
